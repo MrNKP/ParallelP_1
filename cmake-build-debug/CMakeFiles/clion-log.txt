@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2019.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" D:\DOCs\4_course\PP\Lab_1
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/DOCs/4_course/PP/Lab_1/cmake-build-debug

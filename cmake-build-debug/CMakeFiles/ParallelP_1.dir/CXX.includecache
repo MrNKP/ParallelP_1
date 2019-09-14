@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/DOCs/4_course/PP/Lab_1/MatrixSumThread.cpp
+MatrixSumThread.h
+D:/DOCs/4_course/PP/Lab_1/MatrixSumThread.h
+
+D:/DOCs/4_course/PP/Lab_1/MatrixSumThread.h
+iostream
+-
+ctime
+-
+Windows.h
+-
+process.h
+-
+
+D:/DOCs/4_course/PP/Lab_1/main.cpp
+MatrixSumThread.h
+D:/DOCs/4_course/PP/Lab_1/MatrixSumThread.h
+

@@ -9,6 +9,8 @@ const int sizeX = 5;
 const int sizeY = 6;
 const int numThreads = 4;
 
+double myTime;
+
 //int **matrix;
 int matrix[sizeX][sizeY];
 //int *matrixPtr[sizeX];
@@ -22,8 +24,6 @@ struct info
     int sum;
 };
 
-//void getMem();
-//void freeMem();
 void generate();
 void output();
 
@@ -46,29 +46,17 @@ int main() {
         //matrix++;
     }
     */
-
+    cout << "Result for matrix " << sizeX << "*" << sizeY << endl;
     cout << "Sum One Thread = " << sumOneThread(matrix) << endl;
+    cout << "Time = " << myTime << " ms" << endl;
     cout << "Sum Multiple Thread = " << sumMultiThread(matrix) << endl;
+    cout << "Time = " << myTime << " ms" << endl;
 
     //cin.ignore();
     //freeMem();
     return 0;
 }
-/*
-void getMem()
-{
-matrix = new int* [sizeX];
-for (int i=0; i<sizeX; i++)
-matrix[i] = new int[sizeY];
-}
 
-void freeMem()
-{
-for (int i=0; i<sizeX; i++)
-delete[] matrix[i];
-delete[] matrix;
-}
-*/
 void generate()
 {
     for (int i = 0; i < sizeX; i++)
@@ -92,21 +80,30 @@ void output()
 
 int sumOneThread(int mat[sizeX][sizeY])
 {
+    __int64 startTime, endTime, freq;
+    QueryPerformanceFrequency((LARGE_INTEGER *)&freq);
     int result = 0;
+    QueryPerformanceCounter((LARGE_INTEGER *)&startTime);
     for (int i = 0; i<sizeX; i++)
         for (int j = 0; j<sizeY; j++)
             result += mat[i][j];
+    QueryPerformanceCounter((LARGE_INTEGER *)&endTime);
+    double time = 1000 * (endTime-startTime)/freq;
+    myTime=time;
     return result;
 }
 
 int sumMultiThread(int mat[sizeX][sizeY])
 {
+    __int64 startTime, endTime, freq;
+    QueryPerformanceFrequency((LARGE_INTEGER *)&freq);
     int *ptr;
     ptr = matrix[0];
     HANDLE myThread[numThreads];
     //unsigned ThreadID[numThreads];
     info infos[numThreads];
     int n = (sizeX*sizeY) / numThreads;
+    QueryPerformanceCounter((LARGE_INTEGER *)&startTime);
     for (int i = 0; i<numThreads; i++)
     {
         //infos[i].matr = &matrixPtr[0];
@@ -126,6 +123,9 @@ int sumMultiThread(int mat[sizeX][sizeY])
         result += infos[i].sum;
         CloseHandle(myThread[i]);
     }
+    QueryPerformanceCounter((LARGE_INTEGER *)&endTime);
+    double time = 1000 * (endTime-startTime)/freq;
+    myTime=time;
     return result;
 }
 

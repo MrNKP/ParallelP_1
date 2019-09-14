@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ParallelP_1.dir/main.cpp.obj"
+  "CMakeFiles/ParallelP_1.dir/MatrixSumThread.cpp.obj"
   "ParallelP_1.pdb"
   "ParallelP_1.exe"
   "ParallelP_1.exe.manifest"

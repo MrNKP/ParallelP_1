@@ -77,17 +77,38 @@ CMakeFiles\ParallelP_1.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\ParallelP_1.dir\main.cpp.s /c D:\CLionProjects\ParallelP_1\main.cpp
 <<
 
+CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.obj: CMakeFiles\ParallelP_1.dir\flags.make
+CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.obj: ..\MatrixSumThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\CLionProjects\ParallelP_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ParallelP_1.dir/MatrixSumThread.cpp.obj"
+	D:\VISUAL~3\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.obj /FdCMakeFiles\ParallelP_1.dir\ /FS -c D:\CLionProjects\ParallelP_1\MatrixSumThread.cpp
+<<
+
+CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParallelP_1.dir/MatrixSumThread.cpp.i"
+	D:\VISUAL~3\VC\bin\cl.exe > CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\ParallelP_1\MatrixSumThread.cpp
+<<
+
+CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParallelP_1.dir/MatrixSumThread.cpp.s"
+	D:\VISUAL~3\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.s /c D:\CLionProjects\ParallelP_1\MatrixSumThread.cpp
+<<
+
 # Object files for target ParallelP_1
 ParallelP_1_OBJECTS = \
-"CMakeFiles\ParallelP_1.dir\main.cpp.obj"
+"CMakeFiles\ParallelP_1.dir\main.cpp.obj" \
+"CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.obj"
 
 # External object files for target ParallelP_1
 ParallelP_1_EXTERNAL_OBJECTS =
 
 ParallelP_1.exe: CMakeFiles\ParallelP_1.dir\main.cpp.obj
+ParallelP_1.exe: CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.obj
 ParallelP_1.exe: CMakeFiles\ParallelP_1.dir\build.make
 ParallelP_1.exe: CMakeFiles\ParallelP_1.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\CLionProjects\ParallelP_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ParallelP_1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\CLionProjects\ParallelP_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ParallelP_1.exe"
 	"D:\CLion\CLion 2018.3.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\ParallelP_1.dir --manifests  -- D:\VISUAL~3\VC\bin\link.exe /nologo @CMakeFiles\ParallelP_1.dir\objects1.rsp @<<
  /out:ParallelP_1.exe /implib:ParallelP_1.lib /pdb:D:\CLionProjects\ParallelP_1\cmake-build-debug\ParallelP_1.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

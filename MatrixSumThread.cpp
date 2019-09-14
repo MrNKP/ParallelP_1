@@ -56,7 +56,7 @@ int MatrixSumThread::sumOneThread()
             result += matrix[i][j];
 
     QueryPerformanceCounter((LARGE_INTEGER *)&endTime);
-    double time = 1000 * (endTime-startTime)/freq;  // вычисление времени
+    double time = 1000 * (double)(endTime-startTime)/(double)freq;  // вычисление времени
     calcTime = time;
     return result;
 }
@@ -103,13 +103,14 @@ int MatrixSumThread::sumMultiThread()
     }
 
     QueryPerformanceCounter((LARGE_INTEGER *)&endTime);
-    double time = 1000 * (endTime-startTime)/freq;
+    double time = 1000 * (double)(endTime-startTime)/(double)freq;
     calcTime = time;
 
     return result;
 }
 
 // функция-поток
+// я бы назвал это функцией, которую выполняет поток
 unsigned __stdcall MatrixSumThread::sum(void * arg)
 {
     auto *local = (threadStruct*)arg; // приведение типа аргумента к threadStruct

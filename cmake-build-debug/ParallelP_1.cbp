@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/CLionProjects/ParallelP_1/MatrixSumThread.cpp">
+			<Option target="ParallelP_1"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/ParallelP_1/MatrixSumThread.h">
+			<Option target="ParallelP_1"/>
+		</Unit>
 		<Unit filename="D:/CLionProjects/ParallelP_1/main.cpp">
 			<Option target="ParallelP_1"/>
 		</Unit>

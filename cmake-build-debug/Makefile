@@ -124,6 +124,33 @@ ParallelP_1\fast:
 	$(MAKE) -f CMakeFiles\ParallelP_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ParallelP_1.dir\build
 .PHONY : ParallelP_1\fast
 
+MatrixSumThread.obj: MatrixSumThread.cpp.obj
+
+.PHONY : MatrixSumThread.obj
+
+# target to build an object file
+MatrixSumThread.cpp.obj:
+	$(MAKE) -f CMakeFiles\ParallelP_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.obj
+.PHONY : MatrixSumThread.cpp.obj
+
+MatrixSumThread.i: MatrixSumThread.cpp.i
+
+.PHONY : MatrixSumThread.i
+
+# target to preprocess a source file
+MatrixSumThread.cpp.i:
+	$(MAKE) -f CMakeFiles\ParallelP_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.i
+.PHONY : MatrixSumThread.cpp.i
+
+MatrixSumThread.s: MatrixSumThread.cpp.s
+
+.PHONY : MatrixSumThread.s
+
+# target to generate assembly for a file
+MatrixSumThread.cpp.s:
+	$(MAKE) -f CMakeFiles\ParallelP_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ParallelP_1.dir\MatrixSumThread.cpp.s
+.PHONY : MatrixSumThread.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -160,6 +187,9 @@ help:
 	@echo ... ParallelP_1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... MatrixSumThread.obj
+	@echo ... MatrixSumThread.i
+	@echo ... MatrixSumThread.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

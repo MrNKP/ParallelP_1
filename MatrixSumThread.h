@@ -2,6 +2,7 @@
 #define PARALLELP_1_MATRIXSUMTHREAD_H
 
 #include <iostream>
+#include <random>
 #include <ctime>
 #include <Windows.h>
 #include <process.h>
@@ -18,11 +19,11 @@ class MatrixSumThread
         int sum = 0;
     };
 
-    static const int sizeY = 5;
-    static const int sizeX = 5;
+    static const int sizeY = 1000;
+    static const int sizeX = 1000;
     static const int numThreads = 4;
 
-    double calcTime;
+    uint64_t calcTime;
 
     int matrix[sizeY][sizeX];
 

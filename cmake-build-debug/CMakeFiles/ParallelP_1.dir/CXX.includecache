@@ -6,12 +6,10 @@
 
 #IncludeRegexTransform: 
 
-D:/DOCs/4_course/PP/Lab_1/MatrixSumThread.cpp
-MatrixSumThread.h
-D:/DOCs/4_course/PP/Lab_1/MatrixSumThread.h
-
 D:/DOCs/4_course/PP/Lab_1/MatrixSumThread.h
 iostream
+-
+random
 -
 ctime
 -

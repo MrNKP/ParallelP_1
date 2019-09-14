@@ -3,8 +3,8 @@
 using namespace std;
 
 int main() {
-    MatrixSumThread matrixTest{};
-    matrixTest.test();
+    auto *matrixTest = new MatrixSumThread;
+    matrixTest->test();
 
     return 0;
 }

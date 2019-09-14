@@ -2,7 +2,7 @@
 
 
 void MatrixSumThread::test() {
-    srand((unsigned int)time(nullptr));
+
 
     fillRandMatrix();
     printMatrix();
@@ -17,9 +17,12 @@ void MatrixSumThread::test() {
 // заполняет матрицу рандомными значениями
 void MatrixSumThread::fillRandMatrix()
 {
+    mt19937 gen(time(0)); // новый генератор СЧ c++11
+    uniform_int_distribution<> uid(0, 9);
+
     for (int i = 0; i < sizeY; i++)
         for (int j = 0; j < sizeX; j++)
-            matrix[i][j] = rand() % 10;
+            matrix[i][j] = uid(gen);
 }
 
 // вывести матрицу в консоль

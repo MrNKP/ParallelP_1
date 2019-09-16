@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/CLionProjects/ParallelP_1/MatrixSumThread.cpp" "D:/CLionProjects/ParallelP_1/cmake-build-debug/CMakeFiles/ParallelP_1.dir/MatrixSumThread.cpp.obj"
-  "D:/CLionProjects/ParallelP_1/main.cpp" "D:/CLionProjects/ParallelP_1/cmake-build-debug/CMakeFiles/ParallelP_1.dir/main.cpp.obj"
+  "D:/DOCs/4_course/PP/Lab_1/MatrixSumThread.cpp" "D:/DOCs/4_course/PP/Lab_1/cmake-build-debug/CMakeFiles/ParallelP_1.dir/MatrixSumThread.cpp.obj"
+  "D:/DOCs/4_course/PP/Lab_1/main.cpp" "D:/DOCs/4_course/PP/Lab_1/cmake-build-debug/CMakeFiles/ParallelP_1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

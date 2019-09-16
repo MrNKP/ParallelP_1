@@ -3,7 +3,6 @@
 
 void MatrixSumThread::test() {
 
-
     fillRandMatrix();
     printMatrix();
 
@@ -17,7 +16,7 @@ void MatrixSumThread::test() {
 // заполняет матрицу рандомными значениями
 void MatrixSumThread::fillRandMatrix()
 {
-    mt19937 gen(time(0)); // новый генератор СЧ c++11
+    mt19937 gen(time(nullptr)); // новый генератор СЧ c++11
     uniform_int_distribution<> uid(0, 9);
 
     for (int i = 0; i < sizeY; i++)
@@ -56,7 +55,7 @@ int MatrixSumThread::sumOneThread()
             result += matrix[i][j];
 
     QueryPerformanceCounter((LARGE_INTEGER *)&endTime);
-    double time = 1000 * (double)(endTime-startTime)/(double)freq;  // вычисление времени
+    uint64_t time = 1000 * (double)(endTime-startTime)/(double)freq;  // вычисление времени
     calcTime = time;
     return result;
 }
@@ -68,9 +67,8 @@ int MatrixSumThread::sumMultiThread()
     QueryPerformanceFrequency((LARGE_INTEGER *)&freq);
 
     int *matrixLineptr = matrix[0]; // устанавливаем указатель на начало матрицы
-    HANDLE myThread[numThreads]; // массив дескрипторов тредов
+    HANDLE myThread[numThreads]; // массив дескрипторов потока
     threadStruct tstruct[numThreads]; // создаем структуры по кол-ву тредов
-
     int dataBlockSize = (sizeY * sizeX) / numThreads; // размер блока данных для 1 треда
 
     QueryPerformanceCounter((LARGE_INTEGER *)&startTime);
@@ -109,8 +107,7 @@ int MatrixSumThread::sumMultiThread()
     return result;
 }
 
-// функция-поток
-// я бы назвал это функцией, которую выполняет поток
+// функция, которую выполняет поток
 unsigned __stdcall MatrixSumThread::sum(void * arg)
 {
     auto *local = (threadStruct*)arg; // приведение типа аргумента к threadStruct
@@ -118,6 +115,6 @@ unsigned __stdcall MatrixSumThread::sum(void * arg)
     for (int i = local->left; i < local->right; i++)
         local->sum += *(*local->matr + i);
 
-    _endthreadex(0);
+    _endthreadex(0); // завершение потока
     return 0;
 }

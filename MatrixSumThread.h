@@ -11,6 +11,7 @@ using namespace std;
 
 class MatrixSumThread
 {
+    // структура передаваема в поток с помощью аргумента
     struct threadStruct
     {
         int **matr{};
@@ -19,11 +20,12 @@ class MatrixSumThread
         int sum = 0;
     };
 
-    static const int sizeY = 1000;
-    static const int sizeX = 1000;
-    static const int numThreads = 4;
+    // размер матрицы
+    static const int sizeY = 10000;
+    static const int sizeX = 10000;
+    static const int numThreads = 4; // кол-во потоков
 
-    uint64_t calcTime;
+    uint64_t calcTime; // время выполнения
 
     int matrix[sizeY][sizeX];
 
